@@ -3,14 +3,14 @@ import bcrypt
 
 salt = bcrypt.gensalt()
 
-def generate_password(length = 8) :
+def generate_password(length) :
     password = ""
     for _ in range(length) :
         password += chr(random.randint(32, 126))
     return password
 
 def hash_password(password) :
-    # convert string into corresponding array of bytes
+    # convert string into corresponding array of bytes before hashing
     b_password = password.encode('utf-8')
     hashed_password = bcrypt.hashpw(b_password, salt)
     return hashed_password

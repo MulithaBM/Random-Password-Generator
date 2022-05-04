@@ -8,4 +8,3 @@ def generate_password(length = 8) :
 
 length = int(input("Length : ") or 10)
 password = generate_password(length)
-print(password)

@@ -19,7 +19,7 @@ def verify_password(password, hashed_password) :
     b_password = password.encode('utf-8')
     return bcrypt.checkpw(b_password, hashed_password)
 
-length = int(input("Length : ") or 10)
+length = int(input("Length : ") or 11)
 
 password = generate_password(length)
 hashed_password = hash_password(password)

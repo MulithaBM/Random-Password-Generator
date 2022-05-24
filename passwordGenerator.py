@@ -25,4 +25,6 @@ password = generate_password(length)
 hashed_password = hash_password(password)
 
 # verify passwords
-verification = bcrypt.checkpw(password, hashed_password)
+verification = verify_password(password, hashed_password)
+
+print(password)
